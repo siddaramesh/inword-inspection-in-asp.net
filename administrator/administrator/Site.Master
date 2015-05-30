@@ -1,0 +1,64 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="administrator.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title>Aaronlights Pvt Ltd</title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    <script type="text/javascript">
+        $('div.menu ul li a').click(function () {
+            $(this).closest("li").addClass('active');
+        });
+    </script>
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+    <div class="page">
+        <div class="header">
+            <div class="clear hideSkiplink loginDisplay">
+                Welcome<asp:Label CssClass="menumargin" ID="Label1" runat="server" Text=""></asp:Label>
+                <asp:LinkButton CssClass="linkbutton" ID="LinkButton1" runat="server" 
+                    onclick="LinkButton1_Click">Logout</asp:LinkButton>
+           <!--  <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+
+               <LoggedInTemplate>
+                        Welcome <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>!
+                        [ <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out" LogoutPageUrl="~/"/> ]
+                    </LoggedInTemplate>
+                </asp:LoginView> -->
+                 <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu active"
+                    EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal" >
+                   <DynamicSelectedStyle ForeColor="Gray" />
+                   <Items>
+                      <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home">
+                      </asp:MenuItem>
+                      <asp:MenuItem NavigateUrl="~/component.aspx" Text="Inward Inspection">
+                      <asp:MenuItem NavigateUrl="~/powerA.aspx" Text="Powersupply A"/>
+                      <asp:MenuItem NavigateUrl="" Text="Powersupply B" />
+                      <asp:MenuItem NavigateUrl="~/component.aspx" Text="Component" />
+                      <asp:MenuItem NavigateUrl="~/inductor.aspx" Text="Inductor" />
+                      </asp:MenuItem>
+                      <asp:MenuItem NavigateUrl="" Text="Process Inspection" />
+                      <asp:MenuItem NavigateUrl="" Text="Final QC" />
+                    </Items>
+                    <StaticSelectedStyle ForeColor="Gray" />
+                </asp:Menu>
+               
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        <p>
+        &copy;Aaronlights Pvt Ltd | All Rights Reserved
+        </p>
+    </div>
+    </form>
+</body>
+</html>
