@@ -1,6 +1,0 @@
-C:\Users\STOFFICE\Documents\Visual Studio 2010\Projects\administrator\administrator\bin\administrator.dll
-C:\Users\STOFFICE\Documents\Visual Studio 2010\Projects\administrator\administrator\bin\administrator.pdb
-C:\Users\STOFFICE\Documents\Visual Studio 2010\Projects\administrator\administrator\obj\Debug\RdlCompile.cache
-C:\Users\STOFFICE\Documents\Visual Studio 2010\Projects\administrator\administrator\obj\Debug\RdlCompile.compiled
-C:\Users\STOFFICE\Documents\Visual Studio 2010\Projects\administrator\administrator\obj\Debug\administrator.dll
-C:\Users\STOFFICE\Documents\Visual Studio 2010\Projects\administrator\administrator\obj\Debug\administrator.pdb
